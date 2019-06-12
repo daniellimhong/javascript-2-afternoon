@@ -16,6 +16,13 @@
 
 //Code here
 
+var me = {
+  name: "Daniel",
+  age: 23
+}
+
+console.log(me.name)
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -24,6 +31,14 @@
 */
 
 //Code here
+var favoriteThings = {
+  band: 'Too much to choose from',
+  food: 'Sushi & Curry',
+  person: 'Momma',
+  book: 'Battle Royale',
+  movie: 'Forrest Gump?',
+  holiday: 'Thanksgiving'
+};
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
@@ -31,13 +46,18 @@
 */
 
 //Code here
+favoriteThings.car = "Model 3";
+favoriteThings.brand = "Tesla"
 
 /*
+
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings['book'] = 'Harry Potter';
 
 ////////// PROBLEM 3 //////////
 
@@ -50,13 +70,17 @@
 */
 
 //Code here
-
+var backPack = {
+}
+var item = 'firstPocket'
+backPack['firstPocket'] = 'chapstick'
+backPack.color = 'black'
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+// alert(backPack);
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -64,6 +88,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+console.log(backPack);
 
 ////////// PROBLEM 4 //////////
 
@@ -85,6 +110,9 @@ var user2 = {
 */
 
 //Code Here
+user2.name = 'Bryan G. Smith';
+user2.email = 'bryan.smith@devmounta.in';
+
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -97,6 +125,9 @@ var user2 = {
 
 //Code Here
 
+var methodCollection = {
+}
+
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
@@ -104,11 +135,21 @@ var user2 = {
 
 //Code Here
 
+methodCollection.alertHello = function(){
+  alert('hello')
+};
+
+methodCollection.logHello = function (){
+  console.log('hello')
+};
+
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
 
 ////////// PROBLEM 6 //////////
 
@@ -119,6 +160,14 @@ var user2 = {
 
 //Code Here
 
+function makePerson(name, birthday, ssn){
+  return person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+};
+
 ////////// PROBLEM 7 //////////
 
 /*
@@ -127,3 +176,10 @@ var user2 = {
 */
 
 //Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+  return newCard = {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+};
